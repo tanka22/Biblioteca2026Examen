@@ -118,13 +118,19 @@ namespace Biblioteca.Forms
             }
 
             try
-            {
-                int cantidad = txtCantidad.Text;
+            { //se corrigio este linea, asi ya se puede convertir a enteros y validar que sea positivo
+                if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) || cantidad <= 0)
+                {
+                    MessageBox.Show("La cantidad debe ser un número entero positivo.",
+                        "Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 Prestamo prestamo = new Prestamo();
 
                 prestamo.IDAlumno = Convert.ToInt32(cmbAlumno.SelectedValue);
-                prestamo.FechaPrestamo = dtpFechaPrestamo.Text;
+                //se cambio a value asi se asigna un datetime en vez de una cadena de texto
+                prestamo.FechaPrestamo = dtpFechaPrestamo.Value;
                 prestamo.FechaLimite = dtpFechaLimite.Value.Date;
                 prestamo.Estado = "Activo";
 
@@ -138,7 +144,8 @@ namespace Biblioteca.Forms
 
                 IPrestamo repo = new PrestamoRepositorio();
 
-                if (repo.Registrar(prestamo))
+                //se cambio el metodo Registrar para que devuelva un booleano y asi saber si se registro correctamente o no
+                if (repo.Registrar(prestamo,detalles))
                 {
                     MessageBox.Show("Préstamo registrado correctamente.",
                         "Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Information);

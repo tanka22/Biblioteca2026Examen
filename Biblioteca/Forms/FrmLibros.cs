@@ -175,7 +175,8 @@ namespace Biblioteca.Forms
                 libro.Titulo = txtTitulo.Text.Trim();
                 libro.IDAutor = Convert.ToInt32(cmbAutor.SelectedValue);
                 libro.IDCategoria = Convert.ToInt32(cmbCategoria.SelectedValue);
-                libro.Existencia = txtExistencia.Text;
+                //Así se va a poder convertir el texto escrito en un campo a un número entero.
+                libro.Existencia = Convert.ToInt32(txtExistencia.Text); //Se corrigio esta linea de codigo
                 libro.Activo = chkActivo.Checked;
 
                 if (repo.Agregar(libro))
@@ -359,8 +360,8 @@ namespace Biblioteca.Forms
                     CargarTodos();
                 }
                 else
-                {
-                    List<Libro> lista = repo.FiltrarPorCategoria(cmbFiltroCategoria.SelectedValue);
+                { //se hizo unos cambios en esta parte del codigo para que filtre por categoria correctamente
+                    List<Libro> lista = repo.FiltrarPorCategoria(Convert.ToInt32(cmbFiltroCategoria.SelectedValue));
                     MostrarLista(lista);
                 }
             }

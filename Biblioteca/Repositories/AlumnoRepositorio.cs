@@ -16,8 +16,8 @@ namespace Biblioteca.Repositories
             try
             {
                 conn.Open();
-
-                string query = "SELECT * FROM alumns ORDER BY apellidos, nombre";
+                //se cambio de alumns a alumnos para que coincida con la tabla de la base de datos
+                string query = "SELECT * FROM alumnos ORDER BY apellidos, nombre";
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataReader dr = comm.ExecuteReader();
@@ -31,7 +31,7 @@ namespace Biblioteca.Repositories
                         alumno.ID = Convert.ToInt32(dr["id"].ToString());
                         alumno.Matricula = dr["matricula"].ToString();
                         alumno.Nombre = dr["nombre"].ToString();
-                        alumno.Apellidos = dr["apellido"].ToString();
+                        alumno.Apellidos = dr["apellidos"].ToString();
                         alumno.Carrera = dr["carrera"].ToString();
                         alumno.Activo = Convert.ToInt32(dr["activo"].ToString()) == 1;
 
@@ -158,7 +158,7 @@ namespace Biblioteca.Repositories
                 conn.Open();
 
                 string query = "SELECT * FROM alumnos " +
-                               "WHERE CONCAT(nombre, ' ', apellido) LIKE @nombre " +
+                               "WHERE CONCAT(nombre, ' ', apellidos LIKE @nombre " +
                                "ORDER BY apellidos, nombre";
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -221,7 +221,7 @@ namespace Biblioteca.Repositories
                     alumno.ID = Convert.ToInt32(dr["id"].ToString());
                     alumno.Matricula = dr["matricula"].ToString();
                     alumno.Nombre = dr["nombre"].ToString();
-                    alumno.Apellidos = dr["apellido"].ToString();
+                    alumno.Apellidos = dr["apellidos"].ToString();
                     alumno.Carrera = dr["carrera"].ToString();
                     alumno.Activo = Convert.ToInt32(dr["activo"].ToString()) == 1;
                 }
@@ -292,7 +292,7 @@ namespace Biblioteca.Repositories
                 comm.Parameters.AddWithValue("@apellidos", alumno.Apellidos);
                 comm.Parameters.AddWithValue("@carrera", alumno.Carrera);
                 comm.Parameters.AddWithValue("@activo", alumno.Activo ? 1 : 0);
-                comm.Parameters.AddWithValue("@id", alumno.ID + 1);
+                comm.Parameters.AddWithValue("@id", alumno.ID); //se quito el + 1 
 
                 int filas = comm.ExecuteNonQuery();
 

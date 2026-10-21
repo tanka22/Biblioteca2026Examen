@@ -979,17 +979,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salaz\\.nuget\\packages\\": {},
+    "C:\\Users\\beatriz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos\\UNIDEP\\POO\\2026\\practica final\\ProyectoBibliotecaPOO\\BibliotecaErrores\\BibliotecaErrores.csproj",
+      "projectUniqueName": "C:\\Users\\beatriz\\OneDrive\\Imágenes\\logo\\Escritorio\\Biblioteca2026Examen\\Biblioteca\\BibliotecaErrores.csproj",
       "projectName": "BibliotecaErrores",
-      "projectPath": "D:\\Proyectos\\UNIDEP\\POO\\2026\\practica final\\ProyectoBibliotecaPOO\\BibliotecaErrores\\BibliotecaErrores.csproj",
-      "packagesPath": "C:\\Users\\salaz\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos\\UNIDEP\\POO\\2026\\practica final\\ProyectoBibliotecaPOO\\BibliotecaErrores\\obj\\",
+      "projectPath": "C:\\Users\\beatriz\\OneDrive\\Imágenes\\logo\\Escritorio\\Biblioteca2026Examen\\Biblioteca\\BibliotecaErrores.csproj",
+      "packagesPath": "C:\\Users\\beatriz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\beatriz\\OneDrive\\Imágenes\\logo\\Escritorio\\Biblioteca2026Examen\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -997,7 +997,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\salaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beatriz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1005,6 +1005,7 @@
         "net48"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

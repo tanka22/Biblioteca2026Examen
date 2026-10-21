@@ -2,3 +2,29 @@ D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErro
 D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErrores\obj\Debug\BibliotecaErrores.csproj.SuggestedBindingRedirects.cache
 D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErrores\obj\Debug\BibliotecaErrores.exe.config
 D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErrores\obj\Debug\BibliotecaErrores.csproj.CoreCompileInputs.cache
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\BibliotecaErrores.csproj.AssemblyReference.cache
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\BibliotecaErrores.csproj.SuggestedBindingRedirects.cache
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\BibliotecaErrores.exe.config
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\BibliotecaErrores.csproj.CoreCompileInputs.cache
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\BibliotecaErrores.exe.config
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\BibliotecaErrores.exe
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\BibliotecaErrores.pdb
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\Google.Protobuf.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\Google.Protobuf.pdb
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\MySql.Data.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.Buffers.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.IO.Pipelines.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.Memory.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\bin\Debug\ZstdSharp.dll
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\Bibliote.0468C408.Up2Date
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\BibliotecaErrores.exe
+C:\Users\beatriz\OneDrive\Imágenes\logo\Escritorio\Biblioteca2026Examen\Biblioteca\obj\Debug\BibliotecaErrores.pdb

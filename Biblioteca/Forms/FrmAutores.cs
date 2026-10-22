@@ -86,6 +86,14 @@ namespace Biblioteca.Forms
 
                 AutorRepositorio repo = new AutorRepositorio();
 
+                //se agrego otro if para validar que no se repita el autor
+                if (repo.Existe(autor.Nombre, autor.Apellidos))
+                {
+                    MessageBox.Show("El autor ya existe.",
+                        "Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 if (repo.Agregar(autor))
                 {
                     MessageBox.Show("Autor registrado correctamente.",

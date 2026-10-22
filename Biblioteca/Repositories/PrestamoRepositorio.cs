@@ -258,7 +258,7 @@ namespace Biblioteca.Repositories
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
 
-                comm.Parameters.AddWithValue("@alumno", prestamo.IDAlumno);
+                comm.Parameters.AddWithValue("@id_alumno", prestamo.IDAlumno);
                 comm.Parameters.AddWithValue("@fecha_prestamo", prestamo.FechaPrestamo.Date);
                 comm.Parameters.AddWithValue("@fecha_limite", prestamo.FechaLimite.Date);
 

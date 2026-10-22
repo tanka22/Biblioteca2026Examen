@@ -155,5 +155,28 @@ namespace Biblioteca.Repositories
                 conn.Close();
             }
         }
+
+
+        public bool Existe(string nombre, string apellidos)
+        {
+            using (MySqlConnection conn = new MySqlConnection(Utils.connStr))
+            {
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM autores " +
+                               "WHERE LOWER(TRIM(nombre)) = LOWER(TRIM(@nombre)) " +
+                               "AND LOWER(TRIM(apellidos)) = LOWER(TRIM(@apellidos))";
+
+                using (MySqlCommand comm = new MySqlCommand(query, conn))
+                {
+                    comm.Parameters.AddWithValue("@nombre", nombre);
+                    comm.Parameters.AddWithValue("@apellidos", apellidos);
+
+                    int cantidad = Convert.ToInt32(comm.ExecuteScalar());
+                    return cantidad > 0;
+                }
+            }
+        }
+
     }
 }

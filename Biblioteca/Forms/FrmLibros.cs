@@ -153,7 +153,7 @@ namespace Biblioteca.Forms
             {
                 int existencia = Convert.ToInt32(txtExistencia.Text.Trim());
 
-                if (existencia < -1)
+                if (existencia < 0) //se cambio el -1 por 0 para que no permita valores negativos
                 {
                     MessageBox.Show("La existencia no puede ser negativa.",
                         "Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -298,7 +298,7 @@ namespace Biblioteca.Forms
             try
             {
                 LibroRepositorio repo = new LibroRepositorio();
-                List<Libro> lista = repo.BuscarPorISBN(titulo);
+                List<Libro> lista = repo.BuscarPorTitulo(titulo); // se cambio el metodo de buscar por ISBN a buscar por titulo
 
                 MostrarLista(lista);
 

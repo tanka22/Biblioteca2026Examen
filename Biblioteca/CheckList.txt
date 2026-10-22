@@ -1,1 +1,75 @@
 ************CheckList**********************
+# Correcciones realizadas en el proyecto Biblioteca Escolar
+
+1. **Revisé los errores de compilación** que aparecieron en Visual Studio y trabajé en su corrección para reducir la cantidad de errores del proyecto.
+
+2. **Agregué el `using` correspondiente de MySQL** para que el proyecto reconociera las clases `MySqlConnection`, `MySqlCommand` y `MySqlDataReader`.
+
+3. **Revisé el archivo `LibroRepositorio.cs`** y corregí los problemas relacionados con el reconocimiento de las clases de conexión y consulta a la base de datos.
+
+4. **Corregí errores en `FrmLibros.cs`**, relacionados con la conversión de tipos de datos y el filtrado de libros por categoría.
+
+5. **Revisé el formulario `FrmPrestamos.cs`** y corregí la conversión de la cantidad de libros a un valor entero.
+
+6. **Ajusté la asignación de fechas en los préstamos**, para utilizar los valores de fecha correspondientes en lugar de cadenas de texto.
+
+7. **Modifiqué la llamada al método `Registrar()` de préstamos**, agregando la lista de detalles del préstamo que requiere el repositorio.
+
+8. **Revisé la cadena de conexión de MySQL** en la clase `Utils` y comprobé que apuntara a la base de datos `poo_biblioteca`.
+
+9. **Verifiqué la conexión con MySQL Workbench** y comprobé que la base de datos seleccionada fuera la correcta.
+
+10. **Revisé la estructura de la tabla `alumnos`** y ajusté las consultas para que utilizaran los nombres de columnas existentes, como `apellidos`, en lugar de `apellido`.
+
+11. **Probé la ejecución del sistema** después de corregir los errores de compilación y detecté problemas adicionales relacionados con la conexión y la estructura de la base de datos.
+
+12. **Revisé el funcionamiento del módulo de alumnos**, incluyendo las opciones para agregar, modificar, buscar y mostrar registros.
+
+13. **Identifiqué un error al modificar alumnos** debido a que la matrícula debe ser única y el sistema intentó registrar una matrícula que ya existía.
+
+14. **Guardé y subí los cambios al repositorio de GitHub**, realizando los comandos correspondientes para agregar los archivos, crear los commits y ejecutar `git push` en la rama `main`.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. Corrección de referencias de MySQL: corregí los espacios de nombres y las referencias necesarias para que el proyecto reconociera las clases y pudiera compilar correctamente.
+
+2. Corrección de errores de compilación: solucioné los errores que quedaban después de configurar las referencias necesarias, hasta conseguir que el proyecto compilara sin errores.
+
+3. Corrección del registro de libros: corregí el nombre del parámetro de existencia para que coincidiera con el utilizado en la consulta SQL al insertar un libro.
+
+4. Corrección de la búsqueda de libros por título: cambié la llamada del botón de búsqueda para que utilizara BuscarPorTitulo() en lugar de BuscarPorISBN(). Así, la búsqueda corresponde al texto que escribe el usuario.
+
+5. Corrección de la modificación de alumnos: cambié la llamada incorrecta a repo.Agregar(alumno) por repo.Modificar(alumno) para evitar intentar insertar un alumno que ya existe.
+
+6. Corrección del identificador al modificar alumnos: ajusté el uso del ID en el método de modificación del repositorio para que se utilice el identificador correcto, sin incrementarlo.
+
+7. Validación de autores duplicados: agregué el método Existe() en AutorRepositorio para comprobar si ya existe un autor con el mismo nombre y apellidos antes de registrarlo.
+
+8. Mejora del mensaje al registrar autores: modifiqué el botón Agregar de FrmAutores para mostrar una advertencia cuando el autor ya está registrado, en lugar de intentar insertarlo nuevamente.
+
+9. Revisión del registro de categorías: comprobé que MySQL impide registrar una categoría con un nombre duplicado. Queda pendiente mejorar el mensaje para que sea más claro y no muestre directamente el error técnico.
+
+10. Revisión del módulo de préstamos: revisé el código de PrestamoRepositorio e identifiqué una diferencia entre el parámetro @alumno y el parámetro @id_alumno esperado por la consulta de registro.
+
+11. Identificación de mejoras pendientes en préstamos: detecté otros detalles que requieren revisión, como la validación de cantidades, la actualización de existencias, la consulta de préstamos activos y la asignación de la fecha límite.
+
+12. Registro de cambios en Git: guardé y envié los cambios realizados al repositorio remoto mediante Git en los casos que ya habíamos confirmado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

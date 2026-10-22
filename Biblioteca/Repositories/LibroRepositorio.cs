@@ -89,8 +89,8 @@ namespace Biblioteca.Repositories
                         Libro libro = new Libro();
 
                         libro.ID = Convert.ToInt32(dr["id"].ToString());
-                        libro.ISBN = dr["titulo"].ToString();
-                        libro.Titulo = dr["isbn"].ToString();
+                        libro.ISBN = dr["isbn"].ToString(); //estaba al reves se cambio dr["titulo"] a dr["isbn"] 
+                        libro.Titulo = dr["titulo"].ToString();//y dr["isbn"] a dr["titulo"]
                         libro.IDAutor = Convert.ToInt32(dr["id_autor"].ToString());
                         libro.IDCategoria = Convert.ToInt32(dr["id_categoria"].ToString());
                         libro.Existencia = Convert.ToInt32(dr["existencia"].ToString());
@@ -147,7 +147,7 @@ namespace Biblioteca.Repositories
                         libro.Titulo = dr["titulo"].ToString();
                         libro.IDAutor = Convert.ToInt32(dr["id_autor"].ToString());
                         libro.IDCategoria = Convert.ToInt32(dr["id_categoria"].ToString());
-                        libro.Existencia = Convert.ToInt32(dr["id"].ToString());
+                        libro.Existencia = Convert.ToInt32(dr["existencia"].ToString()); //se cambio de dr["existencia"] ya que si no al buscar un libro por titulo no mostraba la existencia del libro
                         libro.Activo = Convert.ToInt32(dr["activo"].ToString()) == 1;
                         libro.NombreAutor = dr["autor_nombre"].ToString() + " " +
                                             dr["autor_apellidos"].ToString();
@@ -235,7 +235,7 @@ namespace Biblioteca.Repositories
 
                 string query = SelectLibros +
                                "WHERE l.id_categoria = @id_categoria " +
-                               "AND l.existencias > 0 " +
+                               "AND l.existencia > 0 " + //existencias esta malll es sin s
                                "ORDER BY l.titulo";
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -342,7 +342,7 @@ namespace Biblioteca.Repositories
                 comm.Parameters.AddWithValue("@titulo", libro.Titulo);
                 comm.Parameters.AddWithValue("@id_autor", libro.IDAutor);
                 comm.Parameters.AddWithValue("@id_categoria", libro.IDCategoria);
-                comm.Parameters.AddWithValue("@existencias", libro.Existencia);
+                comm.Parameters.AddWithValue("@existencia", libro.Existencia); //es sin s existencia
                 comm.Parameters.AddWithValue("@activo", libro.Activo ? 1 : 0);
 
                 int filas = comm.ExecuteNonQuery();
@@ -374,8 +374,8 @@ namespace Biblioteca.Repositories
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
 
-                comm.Parameters.AddWithValue("@isbn", libro.Titulo);
-                comm.Parameters.AddWithValue("@titulo", libro.ISBN);
+                comm.Parameters.AddWithValue("@isbn", libro.ISBN); //estaban al reves se cambio de libro.Titulo a libro.ISBN 
+                comm.Parameters.AddWithValue("@titulo", libro.Titulo);//y de libro.ISBN a libro.Titulo 
                 comm.Parameters.AddWithValue("@id_autor", libro.IDAutor);
                 comm.Parameters.AddWithValue("@id_categoria", libro.IDCategoria);
                 comm.Parameters.AddWithValue("@existencia", libro.Existencia);
@@ -446,7 +446,7 @@ namespace Biblioteca.Repositories
                 conn.Open();
 
                 string query = "UPDATE libros SET existencia = existencia - @cantidad " +
-                               "WHERE id = @id AND existencia > @cantidad";
+                               "WHERE id = @id AND existencia >= @cantidad";// >= para que no se pueda disminuir mas de lo que hay en existencia
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
 
